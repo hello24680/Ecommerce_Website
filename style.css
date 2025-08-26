@@ -1,3 +1,12 @@
+
+/* khuôn mẫu chung cho các thẻ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* khuôn mẫu cho logo */
 .logo{
     width: 7%;
     height: 7%;
@@ -13,3 +22,9 @@ object-fit: fill → kéo dãn ảnh để lấp đầy khung.
     height: 200px;
     object-fit: contain;
 }
+
+.admin_image{
+    width: 100px;
+    object-fit: contain;
+}
+
