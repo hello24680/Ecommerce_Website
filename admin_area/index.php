@@ -11,6 +11,12 @@
     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" 
     crossorigin="anonymous">
 
+    <!-- font awesome link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+
     <!-- css file link-->
     <link rel="stylesheet" href="../style.css">
 
@@ -64,9 +70,9 @@
                 <div class="button text-center">
                     <button class= "my-3"><a href="" class="nav-link text-light bg-info my-1">Insert Products</a></button>
                     <button class= "my-3"><a href="" class="nav-link text-light bg-info my-1">View Products</a></button>
-                    <button class= "my-3"><a href="" class="nav-link text-light bg-info my-1">Insert Categories</a></button>
+                    <button class= "my-3"><a href="index.php?insert_category" class="nav-link text-light bg-info my-1">Insert Categories</a></button>
                     <button class= "my-3"><a href="" class="nav-link text-light bg-info my-1">View Categories</a></button>
-                    <button class= "my-3"><a href="" class="nav-link text-light bg-info my-1">Insert Brands</a></button>
+                    <button class= "my-3"><a href="index.php?insert_brand" class="nav-link text-light bg-info my-1">Insert Brands</a></button>
                     <button class= "my-3"><a href="" class="nav-link text-light bg-info my-1">View Brands</a></button>
                     <button class= "my-3"><a href="" class="nav-link text-light bg-info my-1">All orders</a></button>
                     <button class= "my-3"><a href="" class="nav-link text-light bg-info my-1">All Payments</a></button>
@@ -75,6 +81,18 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- fourth child-->
+    <div class="container my-5">
+        <?php 
+            if(isset($_GET['insert_category'])){
+                include('insert_categories.php');
+            }
+            if(isset($_GET['insert_brand'])){
+                include('insert_brands.php');
+            }
+        ?>
     </div>
 
 
